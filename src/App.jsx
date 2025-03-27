@@ -38,7 +38,7 @@ function App() {
       setLoading(true);
       try {
         const response = await axios.get(
-          `http://www.omdbapi.com/?s=${query}&apikey=${API_KEY}`
+          `https://www.omdbapi.com/?s=${query}&apikey=${API_KEY}`
         );
         setMovies(response.data.Search);
       } catch (error) {
@@ -51,7 +51,7 @@ function App() {
         setLoading(true);
         try {
           const response = await axios.get(
-            `http://www.omdbapi.com/?s=movie&apikey=${API_KEY}&page=1`
+            `https://www.omdbapi.com/?s=movie&apikey=${API_KEY}&page=1`
           );
           setMovies(response.data.Search);
         } catch (error) {
